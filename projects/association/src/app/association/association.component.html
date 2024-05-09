@@ -1,0 +1,40 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <h1>Associations</h1>
+    <div class="navbar-buttons">
+        <button class="action-button" (click)="toggleCreateAssociation()">Criar Associationo</button>
+        <button class="action-button" (click)="fecharComponente()">Sair dos Associationos</button>
+    </div>
+    <div class="search-bar">
+      <input class="search-input" type="text" placeholder="Pesquisar por nome do colaborador" [(ngModel)]="searchQuery" (input)="search()">
+      <button class="search-button" (click)="search()">Pesquisar</button>
+    </div>
+  </nav>
+
+  <div *ngIf="showCreateAssociation">
+    <app-add-association [colaboradoresAssocLista]="colaboradoresAssocLista"  [projectsAssocLista]="projectsAssocLista" (associationAdded)="onAssociationAdded()"></app-add-association>
+  </div>
+  
+  <!-- Create Association Component
+  <div *ngIf="showEditAssociation">
+    <app-edit-Association (AssociationEdited)="refreshAssociation($event)"></app-edit-Association>
+  </div> -->
+  
+
+  <div class="Association-list">
+    <h1>Lista de Associações</h1>
+    <div class="Association-container">
+        <div class="Association-item" *ngFor="let association of filteredAssociations">
+            <div class="Association-info">
+                <p><strong>id:</strong> {{ association.id }}</p>
+                <p><strong>Colaborador:</strong> {{ getColaboratorName(association.colaboratorId) }}</p>
+                <p><strong>projecto:</strong> {{ getProjectName(association.projectId) }}</p>
+                <p><strong>startDate:</strong> {{ association.startDate }}</p>
+                <p><strong>endDate:</strong> {{ association.endDate }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+  

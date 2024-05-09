@@ -1,0 +1,119 @@
+/* Estilos para a barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilos para os botões */
+.action-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.add-button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+.edit-button {
+    padding: 8px 16px;
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para a lista de Associações */
+.Association-list {
+    margin-top: 20px;
+}
+
+.Association-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.Association-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.Association-info {
+    margin-bottom: 10px;
+}
+
+.Association-info p {
+    margin: 5px 0;
+}
+
+.edit-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}

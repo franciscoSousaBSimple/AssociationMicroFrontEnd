@@ -1,0 +1,38 @@
+/* Estilo para a navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2; /* Cor de fundo do menu */
+    color: #fff; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem; /* Tamanho da fonte do título */
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.btn-light {
+    background-color: #fff; /* Cor de fundo dos botões */
+    color: #1976d2; /* Cor do texto dos botões */
+    border: none; /* Sem borda */
+    padding: 8px 16px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar por cima */
+}
+
+/* Estilo para o componente de associações */
+.app-association {
+    margin-top: 20px; /* Espaçamento superior */
+}
