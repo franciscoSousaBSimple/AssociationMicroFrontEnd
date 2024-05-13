@@ -48,6 +48,18 @@ export class AssociationComponent implements OnInit {
     this.getProjects();
   }
 
+  onAssociationAdded(): void {
+    this.pollingInterval = setInterval(() => {
+      if (this.pollingCount >= this.maxPollingCount) {
+        this.pollingCount = 0;
+        clearInterval(this.pollingInterval);
+        return;
+      }
+      this.pollingCount++;
+      this.refreshAssociations();
+    }, 5000);
+  }
+
   refreshAssociations(): void {
     let previousCount = this.associationsLista.length;
     this.associationService.getAssociations().subscribe((holidays) => {
@@ -181,18 +193,4 @@ export class AssociationComponent implements OnInit {
     return dateString.replace(/-/g, '');
 }
 
-  
-
-
-  onAssociationAdded(): void {
-    this.pollingInterval = setInterval(() => {
-      if (this.pollingCount >= this.maxPollingCount) {
-        this.pollingCount = 0;
-        clearInterval(this.pollingInterval);
-        return;
-      }
-      this.pollingCount++;
-      this.refreshAssociations();
-    }, 5000);
-  }
 }
