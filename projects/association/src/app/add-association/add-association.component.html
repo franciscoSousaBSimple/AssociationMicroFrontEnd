@@ -2,7 +2,7 @@
 <div class="addAssociation-form">
     <label for="colaboratorId">Colaborador:</label>
     <select id="colaboratorId" #colaboratorId required>
-        <option *ngFor="let colaborator of colaboradoresAssocLista" [value]="colaborator.id">{{ colaborator.name }}</option>
+        <option *ngFor="let colaborator of colaboradoresAssocLista" [value]="colaborator.id"> {{ colaborator.id }} - {{ colaborator.name }}</option>
     </select>
 <div class="addProject-form">
     <label for="projectId">Project:</label>
