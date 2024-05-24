@@ -38,7 +38,7 @@ export class AddAssociationComponent implements OnInit {
     // Verifica se o campo de nome está vazio
     const colaboratorId = parseInt(idcolab);
     const projectId = parseInt(idProject);
-    if (!idcolab || !idProject) {
+    if (!idcolab || !idProject || !startDate || !endDate) {
       this.showAssociationNameError = true;
       return;
     }

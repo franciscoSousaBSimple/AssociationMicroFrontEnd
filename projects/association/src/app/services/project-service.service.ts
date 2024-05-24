@@ -12,7 +12,7 @@ import { IProject } from '../model/IProject';
 })
 export class ProjectServiceService {
 
-  private urlGet = 'http://localhost:5186';
+  public urlGet = 'http://localhost:5186';
   //private urlPost = 'https://localhost:5188';
   constructor(private httpClient: HttpClient) { }
 

@@ -52,7 +52,7 @@
   </div>
 
   <div class="container">
-    <button class="add-association-btn" (click)="toggleCreateAssociation()">Adicionar Associação</button>
+    <button class="add-association-btn" id="add-association-btn1" (click)="toggleCreateAssociation()">Adicionar Associação</button>
     <div class="search-bar">
       <input class="search-input" type="text" placeholder="Pesquisar por nome do colaborador" [(ngModel)]="searchQuery"
         (input)="search()">
@@ -60,7 +60,7 @@
     </div>
   </div>
 
-  <table>
+  <table id="associations-table" >
     <thead>
       <tr>
         <th>Colaborador</th>
@@ -71,7 +71,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let association of filteredAssociations">
+      <tr id="associations" *ngFor="let association of filteredAssociations" >
         <td>{{ getColaboratorName(association.colaboratorId) }}</td>
         <td>{{ getProjectName(association.projectId) }}</td>
         <td>{{ association.startDate }}</td>

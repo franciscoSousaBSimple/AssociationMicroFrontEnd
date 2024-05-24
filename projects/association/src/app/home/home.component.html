@@ -1,20 +1,17 @@
 <!-- menu-inicial.component.html -->
+Home
+{{title}}
 <ng-toast></ng-toast>
 <nav class="navbar navbar-dark bg-primary">
+  <h1><p>Associações</p></h1>
     <div class="navbar-brand">Minhas associacoes</div>
     <div class="navbar-buttons">
         <button class="btn btn-light" (click)="loadAssociacoes()">Carregar Associacoes</button>
-        <!-- <button class="btn btn-light" (click)="AddAssociacoes()">Adicionar Associacoes</button> -->
-
     </div>
 </nav>
 
   <div *ngIf="associacaoCarregada">
-    <app-association (fecharAssociationEvent)="fecharAssociacoes()"></app-association>
+    <app-association></app-association>
   </div>
 
-  <!-- <div *ngIf="associacaoCriada">
-    <app-add-association (fecharAssociationEvent)="fecharAssociacoes()"></app-add-association>
-  </div>
-   -->
 

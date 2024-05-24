@@ -81,6 +81,12 @@ describe('AddAssociationComponent', () => {
     expect(component.associationAdded.emit).toHaveBeenCalled();
   });
 
+  // it('should display a success message when associations are added', () => {
+  //   spyOn(toastService, 'success');
+  //   component.successMessageVisible;
+  //   expect(toastService.success).toHaveBeenCalled();
+  // });
+
   it('should handle errors from the association service', () => {
     spyOn(toastService, 'info');
     associationService.addAssociation.and.returnValue(throwError(() => new Error('Failed to add')));
@@ -94,8 +100,6 @@ describe('AddAssociationComponent', () => {
     expect(component.showAssociationNameError).toBeTrue();
     expect(associationService.addAssociation).not.toHaveBeenCalled();
   });
-
-
 
   it('should clear fields on successful addition', () => {
     const mockColabId = 1;
@@ -138,4 +142,5 @@ describe('AddAssociationComponent', () => {
       summary: 'Erro ao adicionar associação'
     }));
   });
+
 });
