@@ -59,14 +59,14 @@ describe('Testes para o componente Association', () => {
         cy.get('.navbar-buttons .btn.btn-light').click();
 
         // Entra uma query de pesquisa
-        cy.get('.search-input').type('Vitor');
+        cy.get('.search-input').type('Francisco');
         // Clica no botão de pesquisar
         cy.get('.search-button').click();
 
         // Verifica se a tabela foi filtrada corretamente
         cy.get('[id="associations-table"]').should('exist');
         cy.get('[id="associations-table"]').find('[id="associations"]').each(($item) => {
-            cy.wrap($item).should('contain', 'Vitor');
+            cy.wrap($item).should('contain', 'Francisco');
         });
     });
 

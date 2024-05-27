@@ -29,3 +29,6 @@ jobs:
 
       - name: Run unit tests
         run: ng test --watch=false --browsers=ChromeHeadless
+
+      - name: Run integration tests
+        run: npx cypress run
