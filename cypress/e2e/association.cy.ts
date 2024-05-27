@@ -55,20 +55,21 @@ describe('Testes para o componente Association', () => {
         cy.get('.add-button').should('be.visible');
     });
 
-    // it('should filter associations based on search query', () => {
-    //     cy.get('.navbar-buttons .btn.btn-light').click();
+    it('should filter associations based on search query', () => {
+        cy.get('.navbar-buttons .btn.btn-light').click();
 
-    //     // Entra uma query de pesquisa
-    //     cy.get('.search-input').type('Francisco');
-    //     // Clica no botão de pesquisar
-    //     cy.get('.search-button').click();
+        // Entra uma query de pesquisa
+        cy.get('.search-input').type('Vítor');
+        // Clica no botão de pesquisar
+       // cy.get('.search-button').click();
+        cy.wait(10000)
 
-    //     // Verifica se a tabela foi filtrada corretamente
-    //     cy.get('[id="associations-table"]').should('exist');
-    //     cy.get('[id="associations-table"]').find('[id="associations"]').each(($item) => {
-    //         cy.wrap($item).should('contain', 'Francisco');
-    //     });
-    // });
+        // Verifica se a tabela foi filtrada corretamente
+        cy.get('[id="associations-table"]').should('exist');
+        cy.get('[id="associations-table"]').find('[id="associations"]').each(($item) => {
+            cy.wrap($item).should('contain', 'Vítor');
+        });
+    });
 
     it('should toggle the add association form on button click', () => {
         cy.get('.navbar-buttons .btn.btn-light').click();
