@@ -30,5 +30,10 @@ jobs:
       - name: Run unit tests
         run: ng test --watch=false --browsers=ChromeHeadless
 
+      - name: Start Angular server
+        run: ng serve --port 4203 &
+        env:
+          CI: true
+
       - name: Run integration tests
         run: npx cypress run
